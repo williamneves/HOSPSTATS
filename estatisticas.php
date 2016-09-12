@@ -17,8 +17,11 @@
 			<div class="col-lg-12">
 				<div class="card card-block">
 					<h5 class="card-title">Defina um período para realizar a busca</h5>
-					<div class="input-prepend input-group m-b-1"><span class="add-on input-group-addon"><i class="material-icons">date_range </i></span><input onchange="javascript:submit();" id="reportrange" class="form-control drp" type="text" name="daterange" /></div>
+					<div class="input-prepend input-group m-b-1"><span class="add-on input-group-addon"><i class="material-icons">date_range </i></span><input id="reportrange" class="form-control drp" type="text" name="daterange" /></div>
 				</div>
+			</div>
+			<div class="col-lg-12">
+				<button type="submit" class="btn btn-primary btn-lg btn-block m-b-xs"><span>Consultar</span></button>
 			</div>
 		</form>
 	</div>
