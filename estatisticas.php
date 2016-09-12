@@ -45,7 +45,7 @@ $ontem = $hoje - (24*3600)
 <link rel="stylesheet" href="vendor/ui-select/dist/select.css">
 <link rel="stylesheet" href="vendor/select2/select2.css">
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
-
+<!-- teste -->
 <div class="content-view">
 	<div class="row">
 		<form action="javascript:AjaxForm('carregaAqui','formTabela','controladores/carregaEstatisticas.php');" method="GET" id="formTabela">
