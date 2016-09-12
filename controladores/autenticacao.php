@@ -86,7 +86,7 @@ else
 				else
 				{
 					// Usuário precisa ser cadastro em /data/acesso.json
-					echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><strong>Oops...</strong> Você precisa cadastrar pelo menos 1 privilégio para o usuário.</div>'; exit();
+					echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><strong>Oops...</strong> Você não tem o privilegio para esse sistema. Fale com a TI para ter seu acesso.</div>'; exit();
 				}
 
 				// Criando Sessão com dados do usuário
