@@ -64,7 +64,7 @@ else
 }
 
 ?>
-
+<!-- teste -->
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
