@@ -45,14 +45,6 @@
 						<input value="24" onclick="javascript:submit()" id="24h" name="horario" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">24 horas</span>
 					</label>
-					<label class="custom-control custom-radio">
-						<input value="36" onclick="javascript:submit()" id="36h" name="horario" type="radio" class="custom-control-input">
-						<span class="custom-control-indicator"></span> <span class="custom-control-description">36 horas</span>
-					</label>
-					<label class="custom-control custom-radio">
-						<input value="48" onclick="javascript:submit()" id="48h" name="horario" type="radio" class="custom-control-input">
-						<span class="custom-control-indicator"></span> <span class="custom-control-description">48 horas</span>
-					</label>
 				</div>
 			</div>
 		</form>
