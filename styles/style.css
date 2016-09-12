@@ -8,3 +8,17 @@ tr.group:hover {
 	color: #FFF;
 	font-weight: bold;
 }
+
+#card-block-stats:after {
+  content: "\f200 "; 
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 30px;
+  color: #9b9b9b;
+  top: 17%;
+  left: 83%;
+  z-index: 1;
+}
