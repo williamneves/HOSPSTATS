@@ -26,6 +26,14 @@
 				<div class="card card-block">
 					<h5 class="card-title">Qual período deseja consultar?</h5>
 					<label class="custom-control custom-radio">
+						<input value="01" onclick="javascript:submit()" checked="" id="1h" name="horario" type="radio" class="custom-control-input">
+						<span class="custom-control-indicator"></span> <span class="custom-control-description">1 hora</span>
+					</label>
+					<label class="custom-control custom-radio">
+						<input value="02" onclick="javascript:submit()" checked="" id="2h" name="horario" type="radio" class="custom-control-input">
+						<span class="custom-control-indicator"></span> <span class="custom-control-description">2 horas</span>
+					</label>
+					<label class="custom-control custom-radio">
 						<input value="06" onclick="javascript:submit()" checked="" id="6h" name="horario" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">6 horas</span>
 					</label>
