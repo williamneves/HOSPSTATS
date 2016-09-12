@@ -11,11 +11,6 @@
 <link rel="stylesheet" href="vendor/select2/select2.css">
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
 
-<?php
-$hoje = time(); 
-$ontem = $hoje - (24*3600)
-?>
-
 <div class="content-view">
 	<div class="row">
 		<form action="javascript:AjaxForm('carregaAqui','formTabela','controladores/carregaEstatisticas.php');" method="GET" id="formTabela">
