@@ -1,0 +1,10 @@
+.clear{
+	clear: both;
+}
+
+tr.group,
+tr.group:hover {
+	background-color: #444 !important;
+	color: #FFF;
+	font-weight: bold;
+}
