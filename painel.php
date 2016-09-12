@@ -90,7 +90,7 @@
 								<i class="material-icons">arrow_drop_down</i>
 							</span>
 							<i class="material-icons text-warning">assessment</i>
-							<span>Mapas</span>
+							<span>Estatísticas</span>
 						</a>
 						<ul class="sub-menu">
 							<li><a href="estatisticas"><span>Geral</span></a></li>
