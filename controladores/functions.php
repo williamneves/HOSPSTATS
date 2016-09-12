@@ -1,5 +1,8 @@
 <?php
 
+date_default_timezone_set("America/Sao_Paulo");
+
+// tempo em horas, minutos, segundos...
 function formatar_tempo($timeBD) {
 
 	$timeNow = time();

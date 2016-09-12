@@ -175,12 +175,12 @@
 			startDate: start,
 			endDate: end,
 			ranges: {
-			   'Hoje': [moment(), moment()+'@hoje'],
-			   'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')+'@ontem'],
-			   '7 Dias': [moment().subtract(6, 'days'), moment()+'@7dias'],
-			   '30 Dias': [moment().subtract(29, 'days'), moment()+'@30dias'],
-			   'Mês atual': [moment().startOf('month'), moment()+'@mes_atual'],
-			   'Mês passado': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')+'@mes_passado']
+			   'Hoje': [moment(), moment()],
+			   'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+			   '7 Dias': [moment().subtract(7, 'days'), moment()],
+			   '30 Dias': [moment().subtract(30, 'days'), moment()],
+			   'Mês atual': [moment().startOf('month'), moment()],
+			   'Mês passado': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
 			}
 		}, cb);
 
