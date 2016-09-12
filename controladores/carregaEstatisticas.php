@@ -34,12 +34,28 @@ $data['Final'] = $date[1].' 23:59:59';
 			</span>
 			<span>
 				<?php
-				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
+				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				echo banco($sql);
 				?>
 			</span>
 		</h5>
-		<div class="small text-overflow text-muted">Número de Internações</div>
+		<div class="small text-overflow text-muted">Número de Internações Convênios</div>
+	</div>
+</div>
+<div class="col-sm-6 col-md-4 col-lg-3">
+	<div class="card card-block">
+		<h5 class="m-b-0 v-align-middle text-overflow">
+			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
+				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
+			</span>
+			<span>
+				<?php
+				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
+				echo banco($sql);
+				?>
+			</span>
+		</h5>
+		<div class="small text-overflow text-muted">Número de Internações SUS</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
