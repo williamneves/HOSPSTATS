@@ -25,7 +25,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Milestone">
 	<meta name="theme-color" content="#4C7FF0">
-	<title>Stats - HSC</title>
+	<title>Stats - HospitalSC</title>
 	<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css">
 	<link rel="stylesheet" href="styles/app.min.css">
 	<link rel="stylesheet" href="styles/style.css">
@@ -80,19 +80,22 @@
 							<span>Mapas</span>
 						</a>
 						<ul class="sub-menu">
-							<li>
-								<a href="mapa-farmacia"><span>Farmácia</span></a>
-							</li>
-							<li>
-								<a href="mapa-laboratorio"><span>Laboratório</span></a>
-							</li>
+							<li><a href="mapa-farmacia"><span>Farmácia</span></a></li>
+							<li><a href="mapa-laboratorio"><span>Laboratório</span></a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="estatisticas">
+							<span class="menu-caret">
+								<i class="material-icons">arrow_drop_down</i>
+							</span>
 							<i class="material-icons text-warning">assessment</i>
-							<span>Estatísticas</span>
+							<span>Mapas</span>
 						</a>
+						<ul class="sub-menu">
+							<li><a href="estatisticas"><span>Geral</span></a></li>
+							<li><a href="estatisticas-urgencia"><span>Urgência</span></a></li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
