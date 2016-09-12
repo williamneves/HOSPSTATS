@@ -2,7 +2,7 @@
    "permissoes": {
 	"RAFAEL": { "all": "allowed" },
 	"GWNN": { "all": "allowed" },
-	"MAGDA": { "mapa-laboratorio": "allowed", "mapa-farmacia": "allowed" },
+	"RFAV": { "all": "allowed" },
 	"BEBEL": { "estatisticas": "allowed" }
   }
 }
