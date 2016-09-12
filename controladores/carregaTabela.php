@@ -60,14 +60,6 @@ else if ($tipoExame == 'extSUS')
 		AND ARQATEND.CARATER NOT IN ('02', 'UR') AND ARQATEND.CODPLACO='BPA' and date(cabserv.datasol)=date(current_date) AND (extract(hour from current_time)-extract(hour from cabserv.datasol) <='".$horario."') order by tabintsv.grupointsv,cabserv.datasol";
 }
 
-echo "Debud mode: <br />";
-echo "Tipo de exame escolhido: " . $tipoExame . " <br />";
-echo "Horário escolhido: " . $horario . " <br />";
-
-echo '<pre>';
-print_r($SQL);
-echo '</pre>';
-
 // realizando consulta no banco
 $consulta = consultaBanco($SQL);
 

@@ -1,0 +1,8 @@
+ {
+   "permissoes": {
+	"MAGDA": { "all": "allowed" },
+	"GWNN": { "all": "allowed" },
+	"RAFAEL": { "mapa-laboratorio": "allowed", "mapa-farmacia": "allowed" },
+	"BEBEL": { "estatisticas": "allowed" }
+  }
+}

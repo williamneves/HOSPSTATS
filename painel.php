@@ -71,6 +71,7 @@
 							<span>Home</span>
 						</a>
 					</li>
+					
 					<li>
 						<a href="#">
 							<span class="menu-caret">
@@ -80,12 +81,17 @@
 							<span>Mapas</span>
 						</a>
 						<ul class="sub-menu">
+							<?php if ( array_key_exists('all', $_SESSION['Permissoes']) OR (array_key_exists('mapa-farmacia', $_SESSION['Permissoes']) AND $_SESSION['Permissoes']['mapa-farmacia'] == 'allowed') ): ?>
 							<li><a href="mapa-farmacia"><span>Farmácia</span></a></li>
+							<?php endif ?>
+							<?php if ( array_key_exists('all', $_SESSION['Permissoes']) OR (array_key_exists('mapa-laboratorio', $_SESSION['Permissoes']) AND $_SESSION['Permissoes']['mapa-laboratorio'] == 'allowed') ): ?>
 							<li><a href="mapa-laboratorio"><span>Laboratório</span></a></li>
+							<?php endif ?>
 						</ul>
 					</li>
+					
 					<li>
-						<a href="estatisticas">
+						<a href="#">
 							<span class="menu-caret">
 								<i class="material-icons">arrow_drop_down</i>
 							</span>
@@ -93,8 +99,12 @@
 							<span>Estatísticas</span>
 						</a>
 						<ul class="sub-menu">
+							<?php if ( array_key_exists('all', $_SESSION['Permissoes']) OR (array_key_exists('estatisticas', $_SESSION['Permissoes']) AND $_SESSION['Permissoes']['estatisticas'] == 'allowed') ): ?>
+							<?php endif ?>
 							<li><a href="estatisticas"><span>Geral</span></a></li>
+							<?php if ( array_key_exists('all', $_SESSION['Permissoes']) OR (array_key_exists('estatisticas-urgencia', $_SESSION['Permissoes']) AND $_SESSION['Permissoes']['estatisticas-urgencia'] == 'allowed') ): ?>
 							<li><a href="estatisticas-urgencia"><span>Urgência</span></a></li>
+							<?php endif ?>
 						</ul>
 					</li>
 				</ul>
