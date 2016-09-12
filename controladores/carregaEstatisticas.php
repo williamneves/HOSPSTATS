@@ -81,7 +81,7 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' | <i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color:#25B67A"><i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador)'</span>';
 				?>
 			</span>
 		</h5>
