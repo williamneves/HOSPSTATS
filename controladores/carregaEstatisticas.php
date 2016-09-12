@@ -72,7 +72,7 @@ echo '</pre>';
 ?>
 
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block" id="card-block-stats">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
 			<span>
 				<?php
@@ -86,11 +86,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -103,11 +101,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -120,11 +116,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000088') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -137,11 +131,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000087') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -154,11 +146,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000080') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -171,11 +161,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000079') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -188,11 +176,9 @@ echo '</pre>';
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card card-block">
+	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			<span class="small pull-xs-right tag p-y-0 p-x-xs" style="line-height: 24px; color: #555;">
-				<div class="fa-hover col-md-3 col-sm-4"><i class="material-icons" aria-hidden="true">assessment </i></div>
-			</span>
+			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000041') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";

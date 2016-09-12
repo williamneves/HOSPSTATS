@@ -10,6 +10,11 @@
 <link rel="stylesheet" href="vendor/ui-select/dist/select.css">
 <link rel="stylesheet" href="vendor/select2/select2.css">
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
+<style media="screen" type="text/css">
+
+.stats-bg:after {content: "\f200 ";font-family: FontAwesome;font-style: normal;font-weight: normal;text-decoration: inherit;position: absolute;font-size: 30px;color: #9b9b9b;top: 17%;left: 83%;z-index: 1;}
+
+</style>
 
 <div class="content-view">
 	<div class="row">
