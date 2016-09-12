@@ -172,7 +172,6 @@ else
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
-			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000041') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
@@ -186,5 +185,6 @@ else
 </div>
 
 <div class="clear"></div>
+<!-- Legenda -->
 <div class="col-sm-6 col-md-4 col-lg-3">
 <span>Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Dados Atuais | <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> Dados da época anterior. </span></span></span></div>
