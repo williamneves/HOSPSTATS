@@ -54,7 +54,9 @@ FileETag None
 	RewriteRule ^home/?$ painel.php?pagina=home [NC,L]
 	RewriteRule ^mapa-laboratorio/?$ painel.php?pagina=mapa-laboratorio [NC,L]
 	RewriteRule ^mapa-farmacia/?$ painel.php?pagina=mapa-farmacia [NC,L]
+
 	RewriteRule ^estatisticas/?$ painel.php?pagina=estatisticas [NC,L]
+	RewriteRule ^estatisticas-urgencia/?$ painel.php?pagina=estatisticas-urgencia [NC,L]
 
 	RewriteRule ^sair/?$ controladores/sair.php [NC,L]
 	RewriteRule ^login/?$ index.php [NC,L]
