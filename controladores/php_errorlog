@@ -1,0 +1,4 @@
+[12-Sep-2016 13:23:58 CST6CDT] PHP Parse error:  syntax error, unexpected 'fa' (T_STRING), expecting ',' or ';' in /home/mycase39/public_html/stats/controladores/carregaEstatisticas.php on line 84
+[12-Sep-2016 13:38:50 CST6CDT] PHP Parse error:  syntax error, unexpected ''</span>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/mycase39/public_html/stats/controladores/carregaEstatisticas.php on line 84
+[12-Sep-2016 13:41:06 CST6CDT] PHP Parse error:  syntax error, unexpected '"</span>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/mycase39/public_html/stats/controladores/carregaEstatisticas.php on line 84
+[12-Sep-2016 13:41:08 CST6CDT] PHP Parse error:  syntax error, unexpected '"</span>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/mycase39/public_html/stats/controladores/carregaEstatisticas.php on line 84

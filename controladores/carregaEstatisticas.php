@@ -81,9 +81,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color:#25B67A"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador)"</span>";
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Atendimentos na Urgência</div>
 	</div>
@@ -98,9 +98,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Número de Internações Convênios</div>
 	</div>
@@ -115,9 +115,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Número de Internações SUS</div>
 	</div>
@@ -132,9 +132,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000088') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000088') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Atendimentos Externo - Convênio</div>
 	</div>
@@ -149,9 +149,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000087') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000087') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Atendimentos Externo - SUS</div>
 	</div>
@@ -166,9 +166,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000080') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000080') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Atendimentos Endoscopia</div>
 	</div>
@@ -183,9 +183,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000079') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000079') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Atendimentos Ultra Som</div>
 	</div>
@@ -200,9 +200,9 @@ echo '</pre>';
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000041') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000041') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo "Solicitado: ".banco($sql)." | Anterior: ".banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
-			</span>
+			</span></span>
 		</h5>
 		<div class="small text-overflow text-muted">Atendimentos Radiologia</div>
 	</div>
