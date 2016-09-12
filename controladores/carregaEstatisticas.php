@@ -37,23 +37,27 @@ else
 
 	if ($diffData == 7 OR $diffData == 30 AND $data['MesI'] <> $data['MesF'] )
 	{
+		
 		$data['InicialComparador'] = date('Y-m-d 00:00:00', strtotime("-".($diffData+1)." days", strtotime($data['InicialSemHora'])));
 		$data['FinalComparador'] = date('Y-m-d 23:59:59', strtotime("-".($diffData+1)." days", strtotime($data['FinalSemHora'])));
 	}
 	// Mês atual (Pego o mesmo range do mês passado: se for 01/09 - 12/09, eu pego 01/08 - 12/08)
 	else if ($data['InicialSemHora'] == $primeiroDiaMes AND $data['FinalSemHora'] == date('Y-m-d'))
 	{
+		
 		$data['InicialComparador'] = date('Y-m-d 00:00:00', strtotime(date("Y-m-d", strtotime($data['InicialSemHora'])) . " -1 month"));
 		$data['FinalComparador'] = date('Y-m-d 00:00:00', strtotime(date("Y-m-d", strtotime($data['FinalSemHora'])) . " -1 month"));
 	}
 	// Mês passado (Pego mês passado e comparo com o mês anterior: ex: estou em setembro, pego agosto e comparo com julho)
 	else if($data['MesI'].$data['AnoI'] == $data['MesF'].$data['AnoF'] AND $data['DiaI'] == '01' AND (date('m') - $data['MesI'] == 1 OR date('m') - $data['MesI'] == -11) )
 	{
+		
 		$data['InicialComparador'] = date('Y-m-d 00:00:00', strtotime(date("Y-m-d", strtotime($data['InicialSemHora'])) . " -1 month"));
 		$data['FinalComparador'] = date('Y-m-d 00:00:00', strtotime(date("Y-m-d", strtotime($data['FinalSemHora'])) . " -1 month"));
 	}
 	else
 	{
+		
 		$data['InicialComparador'] = date('Y-m-d 00:00:00', strtotime("-".$diffData." days", strtotime($data['InicialSemHora'])));
 		$data['FinalComparador'] = date('Y-m-d 23:59:59', strtotime("-".$diffData." days", strtotime($data['FinalSemHora'])));
 	}
@@ -72,7 +76,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atendimentos na Urgência</div>
+		<div class="small text-overflow text-muted">Atend. na Urg.</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -87,7 +91,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Número de Internações Convênios</div>
+		<div class="small text-overflow text-muted">Nº Int. Conv.</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -102,7 +106,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Número de Internações SUS</div>
+		<div class="small text-overflow text-muted">Nº Int. SUS</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -117,7 +121,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atendimentos Externo - Convênio</div>
+		<div class="small text-overflow text-muted">Atend. E - Conv</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -132,7 +136,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atendimentos Externo - SUS</div>
+		<div class="small text-overflow text-muted">Atend. E - SUS</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -147,7 +151,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atendimentos Endoscopia</div>
+		<div class="small text-overflow text-muted">Atend. Endos.</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -162,7 +166,7 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atendimentos Ultra Som</div>
+		<div class="small text-overflow text-muted">Atend. USG</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -177,6 +181,10 @@ else
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atendimentos Radiologia</div>
+		<div class="small text-overflow text-muted">Atend. Radio</div>
 	</div>
 </div>
+
+<div class="clear"></div>
+<div class="col-sm-6 col-md-4 col-lg-3">
+<span>Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Dados Atuais | <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> Dados da época anterior. </span></span></span></div>
