@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <link rel="stylesheet" href="vendor/jquery.tagsinput/src/jquery.tagsinput.css">
 <link rel="stylesheet" href="vendor/intl-tel-input/build/css/intlTelInput.css">
 <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
@@ -11,11 +10,6 @@
 <link rel="stylesheet" href="vendor/ui-select/dist/select.css">
 <link rel="stylesheet" href="vendor/select2/select2.css">
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
-
-<?php
-$hoje = time(); 
-$ontem = $hoje - (24*3600)
-?>
 
 <div class="content-view">
 	<div class="row">
@@ -32,7 +26,7 @@ $ontem = $hoje - (24*3600)
 	<div class="row">
 		<div id="carregaAqui"></div>
 	</div>
-=======
+
 <link rel="stylesheet" href="vendor/jquery.tagsinput/src/jquery.tagsinput.css">
 <link rel="stylesheet" href="vendor/intl-tel-input/build/css/intlTelInput.css">
 <link rel="stylesheet" href="vendor/bootstrap-daterangepicker/daterangepicker.css">
@@ -61,5 +55,4 @@ $ontem = $hoje - (24*3600)
 	<div class="row">
 		<div id="carregaAqui"></div>
 	</div>
->>>>>>> bd90ab9c19229ac822d21c7c351e0aa7b3a0ca7f
 </div>
