@@ -40,8 +40,8 @@ else
 	if ($diffData == 7 OR $diffData == 30 AND $data['MesI'] <> $data['MesF'] )
 	{
 		echo "sou 7 ou 30";
-		$data['InicialComparador'] = date('Y-m-d 00:00:00', strtotime("-".$diffData." days", strtotime($data['InicialSemHora'])));
-		$data['FinalComparador'] = date('Y-m-d 23:59:59', strtotime("-".$diffData." days", strtotime($data['FinalSemHora'])));
+		$data['InicialComparador'] = date('Y-m-d 00:00:00', strtotime("-".($diffData+1)." days", strtotime($data['InicialSemHora'])));
+		$data['FinalComparador'] = date('Y-m-d 23:59:59', strtotime("-".($diffData+1)." days", strtotime($data['FinalSemHora'])));
 	}
 	// Mês atual (Pego o mesmo range do mês passado: se for 01/09 - 12/09, eu pego 01/08 - 12/08)
 	else if ($data['InicialSemHora'] == $primeiroDiaMes AND $data['FinalSemHora'] == date('Y-m-d'))
