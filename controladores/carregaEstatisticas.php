@@ -187,4 +187,8 @@ else
 
 <div class="clear"></div>
 <div class="col-sm-6 col-md-4 col-lg-3">
+<<<<<<< Updated upstream
 <span>Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Dados Atuais | <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> Dados da época anterior. </span></span></span></div>
+=======
+<span>Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Dados Atuais | <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> Dados da época anterior. </span></span></span></div>
+>>>>>>> Stashed changes
