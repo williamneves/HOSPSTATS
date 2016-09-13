@@ -10,10 +10,17 @@
 <link rel="stylesheet" href="vendor/ui-select/dist/select.css">
 <link rel="stylesheet" href="vendor/select2/select2.css">
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
+
 <style media="screen" type="text/css">
-
-.stats-bg:after {content: "\f200 ";font-family: FontAwesome;font-style: normal;font-weight: normal;text-decoration: inherit;position: absolute;font-size: 30px;color: #777;top: 17%;left: 83%;z-index: 1;}
-
+    .material-icons.red {
+        color: #D0021B;
+    }
+    .card.card-block.stats-bg {
+        background-image: url(images/estatistica-orage.svg);
+        background-size: 25px;
+        background-position: 90% 50%;
+        background-repeat: no-repeat;
+    }
 </style>
 
 <div class="content-view">

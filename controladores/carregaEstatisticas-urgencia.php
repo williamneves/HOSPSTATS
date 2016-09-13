@@ -65,137 +65,162 @@ else
 
 ?>
 <!-- teste -->
+<div class="clear"></div>
+    <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
+            <h6 class="m-b-0 v-align-middle text-overflow">
+                <i class="material-icons">local_hospital</i> Atendimentos Urgência
+            </h6>
+    </div>
+<div class="clear"></div>
 
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Atend. na Urg.</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Atend. na Urg.</div>
 	</div>
 </div>
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) > '13' AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) > '13' AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Atend. na Urg. ADUL</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Atend. na Urg. ADUL</div>
 	</div>
 </div>
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) <= '13' AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) <= '13' AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Atend. na Urg. PED</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Atend. na Urg. PED</div>
 	</div>
 </div>
+
+<div class="clear"></div>
+<div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
+		<h6 class="m-b-0 v-align-middle text-overflow">
+            <i class="material-icons">local_hotel</i> Internações pela Urgência
+        </h6>
+</div>
+<div class="clear"></div>
+
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Nº Int. Conv.</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Nº Int. Conv.</div>
 	</div>
 </div>
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Nº Int. Conv. ADUL</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Nº Int. Conv. ADUL</div>
 	</div>
 </div>
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Nº Int. Conv. PED</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Nº Int. Conv. PED</div>
 	</div>
 </div>
+
+<div class="clear"></div>
+<div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
+		<h6 class="m-b-0 v-align-middle text-overflow">
+            <i class="material-icons">local_hotel</i> Internações pela Urgência SUS
+        </h6>
+</div>
+<div class="clear"></div>
+
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Nº Int. SUS</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Nº Int. SUS</div>
 	</div>
 </div>
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Nº Int. SUS ADUL</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Nº Int. SUS ADUL</div>
 	</div>
 </div>
 <div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">Nº Int. SUS PED</div>
+		</h3>
+		<div class="normal text-overflow text-muted">Nº Int. SUS PED</div>
 	</div>
 </div>
 
@@ -204,72 +229,71 @@ else
 <div class="clear"></div>
 <!-- Legenda -->
 
-<div class="col-sm-4 col-md-4 col-lg-4"></div>
-<div class="col-sm-4 col-md-4 col-lg-4"></div>
-<div class="col-sm-4 col-md-4 col-lg-4">
-<span style="float: right">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Dados Atuais | <span style="color:#9B9B9B"><i class="fa fa-history" aria-hidden="true"></i> Dados da época anterior. </span></span></span></div>
+<div class="col-sm-12 col-md-12 col-lg-12">
+<span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#9B9B9B"><i class="material-icons">timer</i> Dados da época anterior. </span></span></span>
+</div>
 
 <div class="clear"></div>
 
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D' AND cadlei.extra <> 'S'
 AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')
 ";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> '.banco($sql).' </span>';
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">local_hotel</i> '.banco($sql).' </span>';
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">TOT. DE LEITOS LIVRES S/UTI</div>
+		</h3>
+		<div class="normal text-overflow text-muted">TOT. DE LEITOS LIVRES S/UTI</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*'
 AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> '.banco($sql).' </span>';
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">local_hotel</i> '.banco($sql).' </span>';
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">TOT. DE LEITOS OCUP. S/UTI</div>
+		</h3>
+		<div class="normal text-overflow text-muted">TOT. DE LEITOS OCUP. S/UTI</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D' 
 AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> '.banco($sql).' </span>';
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">local_hotel</i> '.banco($sql).' </span>';
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">TOT. DE LEITOS UTI</div>
+		</h3>
+		<div class="normal text-overflow text-muted">TOT. DE LEITOS UTI</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
-		<h5 class="m-b-0 v-align-middle text-overflow">
+		<h4 class="m-b-0 v-align-middle text-overflow">
 			 
 			<span>
 				<?php
 				$sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*' 
 AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> '.banco($sql).' </span>';
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">local_hotel</i> '.banco($sql).' </span>';
 				?>
 			</span></span>
-		</h5>
-		<div class="small text-overflow text-muted">TOT. DE LEITOS OCUP. UTI</div>
+		</h3>
+		<div class="normal text-overflow text-muted">TOT. DE LEITOS OCUP. UTI</div>
 	</div>
 </div>
 
