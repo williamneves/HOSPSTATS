@@ -1,6 +1,10 @@
  {
    "permissoes": {
 	"RAFAEL": { "all": "allowed" },
+	"FJV": { "estatisticas": "allowed" },
+	"DOAC": { "estatisticas": "allowed" },
+	"FJV": { "estatisticas-urgencia": "allowed" },
+	"DOAC": { "estatisticas-urgencia": "allowed" },
 	"GWNN": { "all": "allowed" },
 	"RFAV": { "all": "allowed" },
 	"BEBEL": { "estatisticas": "allowed" }
