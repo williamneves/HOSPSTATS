@@ -3,7 +3,7 @@
 define("DB",'pgsql');	// mysql ou pgsql
 define("DB_NAME","db1");
 define("DB_USER","PACIENTE");
-define("DB_HOST","138.117.36.146");
+define("DB_HOST","192.168.1.181");
 define("DB_PASS","PAC");
 
 if(!@($conexao=pg_connect ("host=".DB_HOST." dbname=".DB_NAME." port=5432 user=".DB_USER." password=".DB_PASS)))
