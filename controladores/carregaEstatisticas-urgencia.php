@@ -217,7 +217,7 @@ else
 			 
 			<span>
 				<?php
-				$sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D' 
+				$sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D' AND cadlei.extra <> 'S'
 AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')
 ";
 				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> '.banco($sql).' </span>';
