@@ -2,6 +2,7 @@
 
 // include de banco de dados
 include_once("config.php");
+include_once("functions.php");
 
 // verificando infos necessárias
 if( isset($_REQUEST['tipoExame']) AND isset($_REQUEST['horario']) )
@@ -18,7 +19,7 @@ else
 if ($tipoExame == 'urgencia')
 {
 	$SQL = "SELECT CABSERV.NUMREQSERV, CABSERV.NOMEPAC, TABINTSV.DESCINTSV,
-		ARQATEND.CODPLACO, CASE ITMSERV.POSICAO WHEN '1' THEN 'SOL' WHEN '2' THEN 'S/R' WHEN '3' THEN 'S/R' WHEN '4' THEN 'C/R' WHEN '5' THEN 'C/R' WHEN '6' THEN 'CAN' END AS POSICAO, TO_CHAR(CABSERV.DATASOL, 'DD/MM/YYYY') AS DATASOL, CASE TABINTSV.GRUPOINTSV WHEN '1001' THEN 'BIOQUIMICA' WHEN '1002' THEN 'HEMATOLOGIA' WHEN '1018' THEN 'APOIO' WHEN '1003' THEN 'IMUNOLOGIA' WHEN '1004' THEN 'URINALISE' WHEN '1005' THEN 'COPROLOGIA' WHEN '1007' THEN 'MICROBIOLOGIA' WHEN '1009' THEN 'DIVERSOS' END AS BANCADA FROM CABSERV
+		ARQATEND.CODPLACO, CASE ITMSERV.POSICAO WHEN '1' THEN 'SOL' WHEN '2' THEN 'S/R' WHEN '3' THEN 'S/R' WHEN '4' THEN 'C/R' WHEN '5' THEN 'C/R' WHEN '6' THEN 'CAN' END AS POSICAO, CABSERV.DATASOL, CASE TABINTSV.GRUPOINTSV WHEN '1001' THEN 'BIOQUIMICA' WHEN '1002' THEN 'HEMATOLOGIA' WHEN '1018' THEN 'APOIO' WHEN '1003' THEN 'IMUNOLOGIA' WHEN '1004' THEN 'URINALISE' WHEN '1005' THEN 'COPROLOGIA' WHEN '1007' THEN 'MICROBIOLOGIA' WHEN '1009' THEN 'DIVERSOS' END AS BANCADA FROM CABSERV
 		INNER JOIN ARQATEND ON ARQATEND.NUMATEND = CABSERV.NUMATEND
 		INNER JOIN ITMSERV ON ITMSERV.NUMREQSERV = CABSERV.NUMREQSERV
 		INNER JOIN TABINTSV ON TABINTSV.CODINTSV = ITMSERV.CODSVSOL
@@ -97,7 +98,7 @@ if(pg_num_rows($consulta) > 0)
 			echo '<td>'.utf8_encode($dado['descintsv']).'</td>';
 			echo '<td>'.$dado['codplaco'].'</td>';
 			echo '<td>'.utf8_encode($dado['posicao']).'</td>';
-			echo '<td>'.$dado['datasol'].'</td>';
+			echo '<td>'.get_time_ago(converteDataTempoTracada($dado['datasol'])).'</td>';
 			echo '<td>'.utf8_encode($dado['bancada']).'</td>';
 			echo '</tr>';
 		}
