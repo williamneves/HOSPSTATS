@@ -5,20 +5,16 @@
 				<div class="card card-block">
 					<h5 class="card-title">Que tipo de exame deseja consultar?</h5>
 					<label class="custom-control custom-radio">
-						<input value="urgencia" checked="" id="urgencia" name="tipoExame" type="radio" class="custom-control-input">
-						<span class="custom-control-indicator"></span> <span class="custom-control-description">Urgência</span>
+						<input value="A" checked="" id="urgencia" name="tipoExame" type="radio" class="custom-control-input">
+						<span class="custom-control-indicator"></span> <span class="custom-control-description">Ambulatório</span>
+					</label>
+					<label class="custom-control custom-radio">
+						<input value="E" id="externo" name="tipoExame" type="radio" class="custom-control-input">
+						<span class="custom-control-indicator"></span> <span class="custom-control-description">Externo</span>
 					</label>
 					<label class="custom-control custom-radio">
 						<input value="I" id="internacao" name="tipoExame" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Internação</span>
-					</label>
-					<label class="custom-control custom-radio">
-						<input value="E" id="extConvPart" name="tipoExame" type="radio" class="custom-control-input">
-						<span class="custom-control-indicator"></span> <span class="custom-control-description">Externo - Convênio/Particular</span>
-					</label>
-					<label class="custom-control custom-radio">
-						<input value="ES" id="extSUS" name="tipoExame" type="radio" class="custom-control-input">
-						<span class="custom-control-indicator"></span> <span class="custom-control-description">Externo - SUS</span>
 					</label>
 				</div>
 			</div>

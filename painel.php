@@ -140,7 +140,7 @@
 
 				<div class="content-footer">
 					<nav class="footer-left">
-						<span>Copyright</span> &copy; <?=date('Y');?> Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>
+						<span>Copyright</span> &copy; <?=date('Y');?> Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>. Colaborações de William Neves e Rodrigo Vallado.
 					</nav>
 				</div>
 			</div>
