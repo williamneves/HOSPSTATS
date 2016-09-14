@@ -31,6 +31,17 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<?php if ($aba == 'aba_mapas'): ?>
 	<link rel="stylesheet" href="vendor/datatables/media/css/dataTables.bootstrap4.css">
+    <style media="screen" type="text/css">
+    .material-icons.red600 {
+        color: #D0021B;
+    }
+    .card.card-block.stats-bg {
+        background-image: url(images/estatistica-gray.svg);
+        background-size: 25px;
+        background-position: 90% 50%;
+        background-repeat: no-repeat;
+    }
+</style>
 	<?php endif ?>
 </head>
 <body>
