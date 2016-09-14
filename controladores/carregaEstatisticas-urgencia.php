@@ -297,3 +297,14 @@ AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA
 	</div>
 </div>
 
+<?php
+
+     $QueryA = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D' AND cadlei.extra <> 'S'
+AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')
+";
+     $QueryB = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*'
+AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
+
+echo subtrair($QueryA,$QueryB)
+?>
+

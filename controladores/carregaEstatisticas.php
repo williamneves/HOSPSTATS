@@ -65,6 +65,15 @@ else
 
 ?>
 <!-- teste -->
+
+<div class="clear"></div>
+    <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
+            <h6 class="m-b-0 v-align-middle text-overflow">
+                <i class="material-icons">person_pin</i> Atendimentos Ambulatóriais
+            </h6>
+    </div>
+<div class="clear"></div>
+
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="card card-block stats-bg">
 		<h5 class="m-b-0 v-align-middle text-overflow">
@@ -72,11 +81,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atend. na Urg.</div>
+		<div class="normal text-overflow text-muted">Atend. na Urg.</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -87,11 +96,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Nº Int. Conv.</div>
+		<div class="normal text-overflow text-muted">Nº Int. Conv.</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -102,11 +111,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Nº Int. SUS</div>
+		<div class="normal text-overflow text-muted">Nº Int. SUS</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -117,11 +126,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000088') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000088') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atend. E - Conv</div>
+		<div class="normal text-overflow text-muted">Atend. E - Conv</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -132,11 +141,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000087') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000087') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atend. E - SUS</div>
+		<div class="normal text-overflow text-muted">Atend. E - SUS</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -147,11 +156,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000080') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000080') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atend. Endos.</div>
+		<div class="normal text-overflow text-muted">Atend. Endos.</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -162,11 +171,11 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000079') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000079') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atend. USG</div>
+		<div class="normal text-overflow text-muted">Atend. USG</div>
 	</div>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -176,16 +185,30 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000041') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('E') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000041') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="fa fa-clock-o" aria-hidden="true"></i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h5>
-		<div class="small text-overflow text-muted">Atend. Radio</div>
+		<div class="normal text-overflow text-muted">Atend. Radio</div>
 	</div>
 </div>
 
+
+<?php
+
+     $QueryA = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*'
+AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
+     $QueryB = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D'
+AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
+
+echo subtrair($QueryA,$QueryB)
+?>
+
 <div class="clear"></div>
 <!-- Legenda -->
-<div class="col-sm-6 col-md-4 col-lg-3">
 
-<span>Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Dados Atuais | <span style="color:#9B9B9B"><i class="fa fa-clock-o" aria-hidden="true"></i> Dados da época anterior. </span></span></span></div>
+<div class="col-sm-12 col-md-12 col-lg-12">
+<span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#C9C9C9"><i class="material-icons">timer</i> Dados da época anterior. </span></span></span>
+</div>
+
+<div class="clear"></div>
