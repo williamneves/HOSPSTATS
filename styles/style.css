@@ -8,3 +8,12 @@ tr.group:hover {
 	color: #FFF;
 	font-weight: bold;
 }
+    .material-icons.red600 {
+        color: #D0021B;
+    }
+    .card.card-block.stats-bg {
+        background-image: url(images/estatistica-gray.svg);
+        background-size: 25px;
+        background-position: 90% 50%;
+        background-repeat: no-repeat;
+    }
