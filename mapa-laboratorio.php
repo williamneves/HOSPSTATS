@@ -9,15 +9,15 @@
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Urgência</span>
 					</label>
 					<label class="custom-control custom-radio">
-						<input value="internacao" id="internacao" name="tipoExame" type="radio" class="custom-control-input">
+						<input value="I" id="internacao" name="tipoExame" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Internação</span>
 					</label>
 					<label class="custom-control custom-radio">
-						<input value="extConvPart" id="extConvPart" name="tipoExame" type="radio" class="custom-control-input">
+						<input value="E" id="extConvPart" name="tipoExame" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Externo - Convênio/Particular</span>
 					</label>
 					<label class="custom-control custom-radio">
-						<input value="extSUS" id="extSUS" name="tipoExame" type="radio" class="custom-control-input">
+						<input value="ES" id="extSUS" name="tipoExame" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Externo - SUS</span>
 					</label>
 				</div>
