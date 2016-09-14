@@ -25,12 +25,32 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Milestone">
 	<meta name="theme-color" content="#4C7FF0">
+<<<<<<< HEAD
 	<title>Stats - HospitalSC</title>
 	<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css?v=1.<?php echo mt_rand(1,9);?>">
 	<link rel="stylesheet" href="styles/app.min.css?v=1.<?php echo mt_rand(1,9);?>">
 	<link rel="stylesheet" href="styles/style.css?v=1.<?php echo mt_rand(1,9);?>">
 	<?php if ($aba == 'aba_mapas'): ?>
 	<link rel="stylesheet" href="vendor/datatables/media/css/dataTables.bootstrap4.css?v=1.<?php echo mt_rand(1,9);?>">
+=======
+	<title>Sitema de Estatísticas - HSC</title>
+	<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css">
+	<link rel="stylesheet" href="styles/app.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<?php if ($aba == 'aba_mapas'): ?>
+	<link rel="stylesheet" href="vendor/datatables/media/css/dataTables.bootstrap4.css">
+    <style media="screen" type="text/css">
+    .material-icons.red600 {
+        color: #D0021B;
+    }
+    .card.card-block.stats-bg {
+        background-image: url(images/estatistica-gray.svg);
+        background-size: 25px;
+        background-position: 90% 50%;
+        background-repeat: no-repeat;
+    }
+</style>
+>>>>>>> william-brunch
 	<?php endif ?>
 </head>
 <body>
@@ -51,7 +71,7 @@
 						<img src="images/avatar.jpg" class="avatar img-circle" alt="user" title="user" />
 					</div>
 					<div class="user-info expanding-hidden"><?=ucfirst(strtolower($_SESSION['Dados']['Login']));?>
-						<small class="bold">Adminstrador</small>
+						<small class="bold">Usuário WARELINE</small>
 					</div>
 				</a>
 				<div class="dropdown-menu">
@@ -140,7 +160,7 @@
 
 				<div class="content-footer">
 					<nav class="footer-left">
-						<span>Copyright</span> &copy; <?=date('Y');?> Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>. Colaborações de William Neves e Rodrigo Vallado.
+						<span>Copyright</span> &copy; 2016 Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>. Colaborações de William Neves e Rodrigo Vallado.
 					</nav>
 				</div>
 			</div>
