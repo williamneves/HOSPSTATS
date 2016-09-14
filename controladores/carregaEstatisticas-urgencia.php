@@ -68,7 +68,7 @@ else
 <div class="clear"></div>
     <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
             <h6 class="m-b-0 v-align-middle text-overflow">
-                <i class="material-icons">local_hospital</i> Atendimentos Urgência
+                <i class="material-icons red600">local_hospital</i> Atendimentos Urgência
             </h6>
     </div>
 <div class="clear"></div>
@@ -80,7 +80,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('A') AND arqatend.censo IN ('S') AND ARQATEND.CODCC IN ('000049') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -94,7 +94,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) > '13' AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) > '13' AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -108,7 +108,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) <= '13' AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE ARQATEND.TIPOATEND IN ('A') AND ARQATEND.CODCC IN ('000049') AND extract(year from age(cadpac.datanasc)) <= '13' AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -119,7 +119,7 @@ else
 <div class="clear"></div>
 <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
 		<h6 class="m-b-0 v-align-middle text-overflow">
-            <i class="material-icons">local_hotel</i> Internações pela Urgência
+            <i class="material-icons red600">local_hotel</i> Internações pela Urgência
         </h6>
 </div>
 <div class="clear"></div>
@@ -132,7 +132,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -147,7 +147,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -162,7 +162,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco <> ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -173,7 +173,7 @@ else
 <div class="clear"></div>
 <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
 		<h6 class="m-b-0 v-align-middle text-overflow">
-            <i class="material-icons">local_hotel</i> Internações pela Urgência SUS
+            <i class="material-icons red600">local_hotel</i> Internações pela Urgência SUS
         </h6>
 </div>
 <div class="clear"></div>
@@ -186,7 +186,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend WHERE ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -201,7 +201,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) > '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -216,7 +216,7 @@ else
 				<?php
 				$sql = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['Inicial']."' AND '".$data['Final']."'";
 				$sqlComparador = "SELECT COUNT(*) FROM arqatend INNER JOIN cadpac ON cadpac.codpac = arqatend.codpac WHERE extract(year from age(cadpac.datanasc)) <= '13' AND ARQATEND.TIPOATEND IN ('I') AND arqatend.codplaco = ('SIH') AND arqatend.censo IN ('S') AND arqatend.datatend BETWEEN '".$data['InicialComparador']."' AND '".$data['FinalComparador']."'";
-				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#9B9B9B"><i class="material-icons">timer</i> '.banco($sqlComparador);
+				echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> '.banco($sql).' </span>| <span style="color:#C9C9C9"><i class="material-icons">timer</i> '.banco($sqlComparador);
 				?>
 			</span></span>
 		</h3>
@@ -230,7 +230,7 @@ else
 <!-- Legenda -->
 
 <div class="col-sm-12 col-md-12 col-lg-12">
-<span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#9B9B9B"><i class="material-icons">timer</i> Dados da época anterior. </span></span></span>
+<span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#C9C9C9"><i class="material-icons">timer</i> Dados da época anterior. </span></span></span>
 </div>
 
 <div class="clear"></div>

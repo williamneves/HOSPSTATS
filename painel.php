@@ -25,7 +25,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Milestone">
 	<meta name="theme-color" content="#4C7FF0">
-	<title>Stats - HospitalSC</title>
+	<title>Sitema de Estatísticas - HSC</title>
 	<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css">
 	<link rel="stylesheet" href="styles/app.min.css">
 	<link rel="stylesheet" href="styles/style.css">
@@ -51,7 +51,7 @@
 						<img src="images/avatar.jpg" class="avatar img-circle" alt="user" title="user" />
 					</div>
 					<div class="user-info expanding-hidden"><?=ucfirst(strtolower($_SESSION['Dados']['Login']));?>
-						<small class="bold">Adminstrador</small>
+						<small class="bold">Usuário WARELINE</small>
 					</div>
 				</a>
 				<div class="dropdown-menu">
@@ -140,7 +140,7 @@
 
 				<div class="content-footer">
 					<nav class="footer-left">
-						<span>Copyright</span> &copy; <?=date('Y');?> Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>. Colaborações de William Neves e Rodrigo Vallado.
+						<span>Copyright</span> &copy; 2016 Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>. Colaborações de William Neves e Rodrigo Vallado.
 					</nav>
 				</div>
 			</div>

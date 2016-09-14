@@ -12,11 +12,11 @@
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
 
 <style media="screen" type="text/css">
-    .material-icons.red {
+    .material-icons.red600 {
         color: #D0021B;
     }
     .card.card-block.stats-bg {
-        background-image: url(images/estatistica-orage.svg);
+        background-image: url(images/estatistica-gray.svg);
         background-size: 25px;
         background-position: 90% 50%;
         background-repeat: no-repeat;
