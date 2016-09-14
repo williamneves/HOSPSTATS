@@ -48,11 +48,11 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1472648244,byc:0,owlid
 						<p class="text-muted">Faça login para continuar</p>
 					</div>
 					<fieldset class="form-group">
-						<label for="username">Usuário:</label>
-						<input type="text" name="Login" class="form-control form-control-lg" id="usuario" placeholder="usuario" required />
+						<label for="username">Usuário: (Use seu usuário na WARELINE)</label>
+						<input type="text" name="Login" class="form-control form-control-lg" id="usuario" placeholder="Usuário" required />
 					</fieldset>
 					<fieldset class="form-group">
-						<label for="password">Senha:</label>
+						<label for="password">Senha: (Use sua senha na WARELINE)</label>
 						<input type="password" name="Senha" class="form-control form-control-lg" id="password" placeholder="******" required />
 					</fieldset>
 					<label class="custom-control custom-checkbox m-b-1">
@@ -66,7 +66,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1472648244,byc:0,owlid
 				</div>
 			</div>
 			<footer class="text-xs-center p-y-1">
-				<p> Copyright &copy; <?=date('Y');?> - Desenvolvido por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a></p>
+				<p>Copyright &copy; 2016 Criado por <a target="_blank" href="http://www.facebook.com/rafaelpereirasouza">Rafael Souza</a>. Colaborações de William Neves e Rodrigo Vallado.</p>
 			</footer>
 		</div>
 	</div>

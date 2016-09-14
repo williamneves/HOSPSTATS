@@ -457,4 +457,12 @@ function removerTudo($rootDir)
 	return true;
 }
 
+
+function subtrair($QueryA, $QueryB)
+{
+	$consulta1 = banco($QueryA);
+	$consulta2 = banco($QueryB);
+	return $resultado = ($consulta1 - $consulta2);
+}
+
 ?>
