@@ -25,6 +25,14 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Milestone">
 	<meta name="theme-color" content="#4C7FF0">
+<<<<<<< HEAD
+	<title>Stats - HospitalSC</title>
+	<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css?v=1.<?php echo mt_rand(1,9);?>">
+	<link rel="stylesheet" href="styles/app.min.css?v=1.<?php echo mt_rand(1,9);?>">
+	<link rel="stylesheet" href="styles/style.css?v=1.<?php echo mt_rand(1,9);?>">
+	<?php if ($aba == 'aba_mapas'): ?>
+	<link rel="stylesheet" href="vendor/datatables/media/css/dataTables.bootstrap4.css?v=1.<?php echo mt_rand(1,9);?>">
+=======
 	<title>Sitema de Estatísticas - HSC</title>
 	<link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css">
 	<link rel="stylesheet" href="styles/app.min.css">
@@ -42,6 +50,7 @@
         background-repeat: no-repeat;
     }
 </style>
+>>>>>>> william-brunch
 	<?php endif ?>
 </head>
 <body>
@@ -181,7 +190,7 @@
 	<?php if ($aba == 'aba_estatisticas'): ?>
 	<script type="text/javascript" src="scripts/moment.min.js"></script>
 	<script type="text/javascript" src="scripts/daterangepicker.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles/daterangepicker.css" />
+	<link rel="stylesheet" type="text/css" href="styles/daterangepicker.css?v=1.<?php echo mt_rand(1,9);?>" />
 	<script type="text/javascript">
 	$(function() {
 

@@ -1,6 +1,7 @@
  {
    "permissoes": {
 	"RAFAEL": { "all": "allowed" },
+	"WARE": { "all": "allowed" },
 	"FJV": { "estatisticas": "allowed" },
 	"DOAC": { "estatisticas": "allowed" },
 	"FJV": { "estatisticas-urgencia": "allowed" },
@@ -11,6 +12,7 @@
 	"RFAV": { "all": "allowed" },
 	"ADAIR": { "all": "allowed" },
 	"LUCIVALDO": { "all": "allowed" },
+	"THAUAN": { "all": "allowed" },
 	"BEBEL": { "estatisticas": "allowed" }
   }
 }
