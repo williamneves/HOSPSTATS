@@ -11,18 +11,6 @@
 <link rel="stylesheet" href="vendor/select2/select2.css">
 <link rel="stylesheet" href="vendor/selectize/dist/css/selectize.css">
 
-<style media="screen" type="text/css">
-    .material-icons.red {
-        color: #D0021B;
-    }
-    .card.card-block.stats-bg {
-        background-image: url(images/estatistica-orage.svg);
-        background-size: 25px;
-        background-position: 90% 50%;
-        background-repeat: no-repeat;
-    }
-</style>
-
 <div class="content-view">
 	<div class="row">
 		<form action="javascript:AjaxForm('carregaAqui','formTabela','controladores/carregaEstatisticas-urgencia.php');" method="GET" id="formTabela">
