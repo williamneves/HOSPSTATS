@@ -44,6 +44,7 @@ if(pg_num_rows($consulta) > 0)
 			<th>Nome do Paciente</th>
 			<th>Exame</th>
 			<th>Convênio</th>
+			<th>Liberado</th>
 			<th>Data</th>
 			<th>Bancada</th>
 		</tr>
@@ -56,6 +57,7 @@ if(pg_num_rows($consulta) > 0)
 		echo '<td>'.utf8_encode($dado['nomepac']).'</td>';
 		echo '<td>'.utf8_encode($dado['descintsv']).'</td>';
 		echo '<td>'.$dado['codplaco'].'</td>';
+		echo '<td>'.$dado['liberado'].'</td>';
 		echo '<td>'.get_time_ago(converteDataTempoTracada($dado['datasol'])).'</td>';
 		echo '<td>'.utf8_encode($dado['bancada']).'</td>';
 		echo '</tr>';
@@ -84,6 +86,7 @@ echo '
 			<th>Nome do Paciente</th>
 			<th>Exame</th>
 			<th>Convênio</th>
+			<th>Liberado</th>
 			<th>Data</th>
 			<th>Bancada</th>
 		</tr>
