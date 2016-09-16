@@ -16,13 +16,14 @@ else
 }
 
 // Consultar banco com as informãções do form
-$SQL = "SELECT I.NUMREQSERV, P.NOMEPAC, T.DESCINTSV, A.CODPLACO, C.DATASOL,
+$SQL = "SELECT DISTINCT I.NUMREQSERV, P.NOMEPAC, T.DESCINTSV, A.CODPLACO, CASE R.LIBERADO WHEN 'S' THEN 'LIBERADO' ELSE 'N' END AS LIBERADO, C.DATASOL,
 CASE T.GRUPOINTSV WHEN '1001' THEN 'BIOQUIMICA' WHEN '1002' THEN 'HEMATOLOGIA' WHEN '1003' THEN 'IMUNOLOGIA' WHEN '1004' THEN 'URINALISE' WHEN '1005' THEN 'COPROLOGIA' WHEN '1006' THEN 'ENDOCRINOLOGIA' WHEN '1007' THEN 'MICROBIOLOGIA' WHEN '1008' THEN 'BIOLOGIA MOL' WHEN '1009' THEN 'DIVERSOS' WHEN '1018' THEN 'APOIO' END AS BANCADA
 FROM ITMSERV I INNER JOIN TABINTSV T ON I.CODSVSOL = T.CODINTSV
 INNER JOIN CABSERV C USING (NUMREQSERV)
 INNER JOIN ARQATEND A USING (NUMATEND)
 INNER JOIN CADPAC P USING (CODPAC)
-WHERE C.CODLAB = '03' AND A.TIPOATEND = '".$tipoExame."' AND C.DATASOL >= NOW() - '".$horario." HOUR' :: INTERVAL ORDER BY NUMREQSERV";
+LEFT JOIN RESULT R USING (NUMREQSERV)
+WHERE C.CODLAB = '03' AND A.TIPOATEND = '".$tipoExame."' AND C.DATASOL >= NOW() - '".$horario." HOUR' :: INTERVAL AND R.LIBERADO IN ('S','N') ORDER BY NUMREQSERV";
 
 // realizando consulta no banco
 $consulta = consultaBanco($SQL);
@@ -43,6 +44,7 @@ if(pg_num_rows($consulta) > 0)
 			<th>Nome do Paciente</th>
 			<th>Exame</th>
 			<th>Convênio</th>
+			<th>Liberado</th>
 			<th>Data</th>
 			<th>Bancada</th>
 		</tr>
@@ -55,6 +57,7 @@ if(pg_num_rows($consulta) > 0)
 		echo '<td>'.utf8_encode($dado['nomepac']).'</td>';
 		echo '<td>'.utf8_encode($dado['descintsv']).'</td>';
 		echo '<td>'.$dado['codplaco'].'</td>';
+		echo '<td>'.$dado['liberado'].'</td>';
 		echo '<td>'.get_time_ago(converteDataTempoTracada($dado['datasol'])).'</td>';
 		echo '<td>'.utf8_encode($dado['bancada']).'</td>';
 		echo '</tr>';
@@ -83,6 +86,7 @@ echo '
 			<th>Nome do Paciente</th>
 			<th>Exame</th>
 			<th>Convênio</th>
+			<th>Liberado</th>
 			<th>Data</th>
 			<th>Bancada</th>
 		</tr>
@@ -109,7 +113,7 @@ echo '</table>';
 				api.column(1, {page:'current'} ).data().each( function ( group, i ) {
 					if ( last !== group ) {
 						$(rows).eq( i ).before(
-							'<tr class="group"><td colspan="5">'+group+'</td></tr>'
+							'<tr class="group"><td colspan="6">'+group+'</td></tr>'
 						);
 
 						last = group;
