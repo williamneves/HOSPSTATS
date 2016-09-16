@@ -5,7 +5,7 @@ include_once("config.php");
 include_once("functions.php");
 
 // verificando infos necessárias
-if( isset($_REQUEST['tipoExame']) AND isset($_REQUEST['horario']) AND isset($_REQUEST['lib']) AND isset($_REQUEST['nlib']))
+if( isset($_REQUEST['tipoExame']) AND isset($_REQUEST['horario']) AND (isset($_REQUEST['lib']) OR isset($_REQUEST['nlib'])))
 {
 	$tipoExame = $_REQUEST['tipoExame'];
 	$horario = $_REQUEST['horario'];
