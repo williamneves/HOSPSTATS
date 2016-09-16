@@ -69,7 +69,7 @@ else
 <div class="clear"></div>
 	<div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
 			<h6 class="m-b-0 v-align-middle text-overflow">
-				<i class="material-icons red600">local_hospital</i> Atendimentos Urgência
+				<i class="material-icons  ">local_hospital</i> Atendimentos Urgência
 			</h6>
 	</div>
 <div class="clear"></div>
@@ -120,7 +120,7 @@ else
 <div class="clear"></div>
 <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
 		<h6 class="m-b-0 v-align-middle text-overflow">
-			<i class="material-icons red600">local_hotel</i> Internações pela Urgência
+			<i class="material-icons  ">local_hotel</i> Internações pela Urgência
 		</h6>
 </div>
 <div class="clear"></div>
@@ -171,10 +171,215 @@ else
 	</div>
 </div>
 
+<div class="col-sm-4 col-md-4 col-lg-4">
+	<div class="card card-block stats-bg">
+
+        <div class="normal text-overflow text-muted" style="padding: 0 0 10px 0;font-weight: bold;">Leitos LIVRES Convênios</div>
+
+		<h4 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
+			<span>
+				<?php
+                    $sql = "/* LEITOS LIVRES CONVENIOS */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000051','000095')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.extra <> 'S'
+                            AND cadlei.tipobloq IN ('L', 'B')";
+
+                    echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">lock_open</i> '.banco($sql).' Total</span>';
+                ?>
+
+		</h4>
+
+        <h5 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
+			<span>
+				<?php
+                    $sql = "/* LEITOS LIVRES CONVENIOS */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000051')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.extra <> 'S'
+                            AND cadlei.tipobloq IN ('L', 'B')";
+
+                    echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">lock_open</i> '.banco($sql).' Posto 1</span>';
+                ?>
+
+		</h5>
+
+        <h5 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
+			<span>
+				<?php
+                    $sql = "/* LEITOS LIVRES CONVENIOS */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000095')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.extra <> 'S'
+                            AND cadlei.tipobloq IN ('L', 'B')";
+
+                    echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">lock_open</i> '.banco($sql).' Posto 4</span>';
+                ?>
+
+		</h5>
+
+	</div>
+</div>
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+	<div class="card card-block stats-bg">
+
+        <div class="normal text-overflow text-muted" style="padding: 0 0 10px 0;font-weight: bold;">Leitos OCUPADOS Convênios</div>
+
+        <h4 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
+			<span>
+				<?php
+                    $sql = "/* PACIENTES INTERNADOS NO POSTO 1 e 4 */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000051','000095')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.tipobloq = '*' ";
+
+                    echo '<span style="color: #D0021B;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Total</span>';
+                ?>
+
+            </span>
+        </h4>
+
+
+        <h5 class="m-b-0 v-align-middle text-overflow">
+                <?php
+                    $sql = "/* PACIENTES INTERNADOS NO POSTO 1 */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000051')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.tipobloq = '*' ";
+
+                    echo '<span style="color: #D0021B;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Posto 1</span>';
+                ?>
+        </h5>
+        <h5 class="m-b-0 v-align-middle text-overflow">
+                <?php
+                    $sql = "/* PACIENTES INTERNADOS NO POSTO 4 */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000095')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.tipobloq = '*' ";
+
+                    echo '<span style="color: #D0021B;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Posto 4</span>';
+                ?>
+        </h5>
+
+    </div>
+</div>
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+	<div class="card card-block stats-bg">
+
+        <div class="normal text-overflow text-muted" style="padding: 0 0 10px 0;font-weight: bold;">Leitos UTI</div>
+
+		<h4 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
+			<span>
+				<?php
+                    $sql = " /* LEITOS DISPONIVEIS */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000050')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND cadlei.extra <> 'S'
+                            AND cadlei.tipobloq IN ('L', 'B')";
+
+                    echo '<span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">lock_open</i> '.banco($sql).' Leitos Livres</span>';
+                ?>
+
+
+            </span>
+		</h4>
+
+        <h5 class="m-b-0 v-align-middle text-overflow">
+                <?php
+                    $sql = "/* LEITOS OCUPADOS CONVENIOS */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            INNER JOIN arqatend ON arqatend.numatend = cadlei.auxatend
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000050')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND arqatend.codplaco <> 'SIH'";
+
+                    echo '<span style="color: #D0021B;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Ocupado Convênios</span>';
+                ?>
+        </h5>
+
+        <h5 class="m-b-0 v-align-middle text-overflow">
+                <?php
+                    $sql = "/* LEITOS OCUPADOS SUS */
+                            SELECT
+                                COUNT (*)
+                            FROM
+                                cadlei
+                            INNER JOIN cadaco ON cadaco.codaco = cadlei.codaco
+                            INNER JOIN arqatend ON arqatend.numatend = cadlei.auxatend
+                            WHERE
+                                cadlei.tipoatend = 'I'
+                            AND cadaco.codcc IN ('000050')
+                            AND cadlei.tipobloq NOT IN ('D')
+                            AND arqatend.codplaco = 'SIH'";
+
+                    echo '<span style="color: #D0021B;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Ocupado SUS</span>';
+                ?>
+        </h5>
+
+	</div>
+</div>
+
 <div class="clear"></div>
 <div class="col-sm-12 col-md-12 col-lg-12" style="padding:20px">
 		<h6 class="m-b-0 v-align-middle text-overflow">
-			<i class="material-icons red600">local_hotel</i> Internações pela Urgência SUS
+			<i class="material-icons  ">local_hotel</i> Internações pela Urgência SUS
 		</h6>
 </div>
 <div class="clear"></div>
@@ -225,76 +430,11 @@ else
 	</div>
 </div>
 
-
-
-<div class="clear"></div>
-<!-- Legenda -->
-
-<div class="col-sm-12 col-md-12 col-lg-12">
-<span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#C9C9C9"><i class="material-icons">timer</i> Dados da época anterior. </span></span></span>
-</div>
-
-<div class="clear"></div>
-
-<div class="col-sm-6 col-md-6 col-lg-6">
-	<div class="card card-block stats-bg">
-
-        <div class="normal text-overflow text-muted" style="padding: 0 0 10px 0;font-weight: bold;">Leitos Clínicos</div>
-
-		<h4 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
-			<span>
-				<?php
-                    $QueryA = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D' AND cadlei.extra <> 'S'
-                    AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-                    $QueryB = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*' AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-                ?>
-
-                <span style="color: #25B67A;font-weight: bolder;"><i class="material-icons">local_hotel</i> <?= subtrair($QueryA,$QueryB); ?> Leitos Livres</span>
-
-		</h4>
-        <h5 class="m-b-0 v-align-middle text-overflow">
-                <?php
-                    $sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*' AND cadlei.codlei NOT IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-                    echo '<span style="color: #C9C9C9;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Leitos Utilizados</span>';
-                ?>
-        </h5>
-
-	</div>
-</div>
-
-<div class="col-sm-6 col-md-6 col-lg-6">
-	<div class="card card-block stats-bg">
-
-        <div class="normal text-overflow text-muted" style="padding: 0 0 10px 0;font-weight: bold;">Leitos UTI</div>
-
-		<h4 class="m-b-0 v-align-middle text-overflow" style="padding-bottom:5px">
-			<span>
-				<?php
-                    $QueryA = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq <> 'D'
-                    AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-                    $QueryB = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*'
-                    AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-                ?>
-
-                <span style="color: #25B67A;font-weight: bolder;"><i class="material-icons">local_hotel</i> <?= subtrair($QueryA,$QueryB); ?> Leitos Livres</span>
-
-		</h4>
-        <h5 class="m-b-0 v-align-middle text-overflow">
-                <?php
-                    $sql = "SELECT COUNT(*) FROM cadlei WHERE cadlei.tipoatend ='I' AND cadlei.tipobloq = '*'
-                    AND cadlei.codlei IN ('UTA-01','UTA-02','UTA-03','UTA-04','UTA-05','UTA-06','UTA-07','UTA-08','UTA-09','UTA-10')";
-                    echo '<span style="color: #C9C9C9;font-weight: light;"><i class="material-icons">local_hotel</i> ' .banco($sql).' Leitos Utilizados</span>';
-                ?>
-        </h5>
-
-	</div>
-</div>
-
     <div class="clear"></div>
 <!-- Legenda -->
 
 <div class="col-sm-12 col-md-12 col-lg-12">
-    <span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#C9C9C9"><i class="material-icons">timer</i> Dados da época anteriores | </span></span><span style="color: #25B67A;font-weight: bolder;"><i class="material-icons">local_hotel</i> Leitos Livre | </span><span style="color: #C9C9C9;font-weight: light;"><i class="material-icons">local_hotel</i> Leitos Utilizados.</span></span>
+    <span style="float: right;padding:20px;">Legenda: <span style="color: #25B67A;font-weight: bolder;"> <i class="material-icons">person</i> Dados Atuais | <span style="color:#C9C9C9"><i class="material-icons">timer</i> Dados da época anteriores | </span></span><span style="color: #25B67A;font-weight: bolder;"><i class="material-icons">lock_open</i> Leitos Livre | </span><span style="color: #D0021B;font-weight: light;"><i class="material-icons">local_hotel</i> Leitos Utilizados.</span></span>
 </div>
 
 <div class="clear"></div>
