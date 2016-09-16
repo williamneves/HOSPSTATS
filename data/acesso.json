@@ -4,15 +4,16 @@
 	"WARE": { "all": "allowed" },
 	"FJV": { "estatisticas": "allowed" },
 	"DOAC": { "estatisticas": "allowed" },
-	"FJV": { "estatisticas-urgencia": "allowed" },
-	"DOAC": { "estatisticas-urgencia": "allowed" },
-    "ALGR": { "estatisticas-urgencia": "allowed" },
+  "ALGR": { "estatisticas-urgencia": "allowed" },
 	"GWNN": { "all": "allowed" },
 	"MGNJ": { "all": "allowed" },
 	"RFAV": { "all": "allowed" },
 	"ADAIR": { "all": "allowed" },
 	"LUCIVALDO": { "all": "allowed" },
 	"THAUAN": { "all": "allowed" },
-	"BEBEL": { "estatisticas": "allowed" }
-  }
+	"BEBEL": { "estatisticas": "allowed" },
+  "POACV": { "mapa-laboratorio": "allowed" },
+  "POACV": { "mapa-laboratorio": "allowed" },
+  "POACV": { "mapa-laboratorio": "allowed" }
+	}
 }
