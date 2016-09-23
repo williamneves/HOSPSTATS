@@ -5,10 +5,12 @@ include_once("config.php");
 include_once("functions.php");
 
 // verificando infos necessárias
-if( isset($_REQUEST['tipoExame']) AND isset($_REQUEST['horario']) )
+if( isset($_REQUEST['tipoExame']) AND isset($_REQUEST['horario']) AND (isset($_REQUEST['lib']) OR isset($_REQUEST['nlib'])))
 {
 	$tipoExame = $_REQUEST['tipoExame'];
 	$horario = $_REQUEST['horario'];
+	$lib = $_REQUEST['lib'];
+	$nlib = $_REQUEST['nlib'];
 }
 else
 {
@@ -23,7 +25,7 @@ INNER JOIN CABSERV C USING (NUMREQSERV)
 INNER JOIN ARQATEND A USING (NUMATEND)
 INNER JOIN CADPAC P USING (CODPAC)
 LEFT JOIN RESULT R USING (NUMREQSERV)
-WHERE C.CODLAB = '03' AND A.TIPOATEND = '".$tipoExame."' AND C.DATASOL >= NOW() - '".$horario." HOUR' :: INTERVAL AND R.LIBERADO IN ('S','N') ORDER BY NUMREQSERV";
+WHERE C.CODLAB = '03' AND A.TIPOATEND = '".$tipoExame."' AND C.DATASOL >= NOW() - '".$horario." HOUR' :: INTERVAL AND R.LIBERADO IN ('".$lib."','".$nlib."') ORDER BY NUMREQSERV";
 
 // realizando consulta no banco
 $consulta = consultaBanco($SQL);
@@ -96,7 +98,7 @@ echo '</table>';
 ?>
 
 <script type="text/javascript" class="init">
-	
+
 	$(document).ready(function() {
 		var table = $('#tabela').DataTable({
 			"scrollX": true,
