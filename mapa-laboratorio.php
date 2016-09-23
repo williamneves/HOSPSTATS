@@ -5,7 +5,7 @@
 				<div class="card card-block">
 					<h5 class="card-title">Que tipo de exame deseja consultar?</h5>
 					<label class="custom-control custom-radio">
-						<input value="A" id="urgencia" name="tipoExame" type="radio" class="custom-control-input">
+						<input value="A" checked="" id="urgencia" name="tipoExame" type="radio" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Ambulatório</span>
 					</label>
 					<label class="custom-control custom-radio">
@@ -17,11 +17,11 @@
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Internação</span>
 					</label>
 					<label class="custom-control custom-checkbox">
-						<input value="S" checked="0" id="liberado" name="lib" type="checkbox" class="custom-control-input">
+						<input value="S" id="liberado" name="lib" type="checkbox" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Liberado</span>
 					</label>
 					<label class="custom-control custom-checkbox">
-						<input value="N" checked="0" id="naoliberado" name="nlib" type="checkbox" class="custom-control-input">
+						<input value="N" checked="" id="naoliberado" name="nlib" type="checkbox" class="custom-control-input">
 						<span class="custom-control-indicator"></span> <span class="custom-control-description">Não Liberado</span>
 					</label>
 				</div>
