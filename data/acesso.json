@@ -4,7 +4,8 @@
 	"WARE": { "all": "allowed" },
 	"FJV": { "estatisticas": "allowed" },
 	"DOAC": { "estatisticas": "allowed" },
-  "ALGR": { "estatisticas-urgencia": "allowed" },
+	"MPAX": { "all": "allowed" },
+ 	"ALGR": { "estatisticas-urgencia": "allowed" },
 	"GWNN": { "all": "allowed" },
 	"MGNJ": { "all": "allowed" },
 	"RFAV": { "all": "allowed" },
@@ -12,6 +13,6 @@
 	"LUCIVALDO": { "all": "allowed" },
 	"THAUAN": { "all": "allowed" },
 	"BEBEL": { "estatisticas": "allowed" },
-  "POACV": { "mapa-laboratorio": "allowed" }
+ 	"POACV": { "mapa-laboratorio": "allowed" }
 	}
 }
