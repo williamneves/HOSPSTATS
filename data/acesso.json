@@ -13,7 +13,6 @@
 	"LUCIVALDO": { "all": "allowed" },
 	"THAUAN": { "all": "allowed" },
 	"BEBEL": { "estatisticas": "allowed" },
-<<<<<<< HEAD
   "POACV": { "mapa-laboratorio": "allowed" },
   "AMOB": { "mapa-laboratorio": "allowed" },
   "JPGS": { "mapa-laboratorio": "allowed" },
@@ -21,9 +20,5 @@
   "EEMS": { "mapa-laboratorio": "allowed" },
   "HRA": { "mapa-laboratorio": "allowed" },
   "POACV": { "mapa-laboratorio": "allowed" }
-  }
-=======
- 	"POACV": { "mapa-laboratorio": "allowed" }
 	}
->>>>>>> refs/remotes/origin/master
 }
