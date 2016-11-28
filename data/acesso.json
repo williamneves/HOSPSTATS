@@ -2,8 +2,8 @@
    "permissoes": {
 	"RAFAEL": { "all": "allowed" },
 	"WARE": { "all": "allowed" },
-	"FJV": { "estatisticas": "allowed" },
-	"DOAC": { "estatisticas": "allowed" },
+	"FJV": { "estatisticas-urgencia": "allowed" },
+	"DOAC": { "estatisticas-urgencia": "allowed" },
 	"MPAX": { "all": "allowed" },
  	"ALGR": { "estatisticas-urgencia": "allowed" },
 	"GWNN": { "all": "allowed" },
