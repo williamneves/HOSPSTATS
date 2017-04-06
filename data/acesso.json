@@ -19,6 +19,7 @@
   "NRB": { "mapa-laboratorio": "allowed" },
   "EEMS": { "mapa-laboratorio": "allowed" },
   "HRA": { "mapa-laboratorio": "allowed" },
-  "POACV": { "mapa-laboratorio": "allowed" }
+  "JAIRO": { "all": "allowed" },
+  "MANL": { "all": "allowed" }
 	}
 }
